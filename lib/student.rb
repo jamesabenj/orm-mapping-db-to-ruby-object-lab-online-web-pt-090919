@@ -83,14 +83,16 @@ class Student
       end
     end
 
-    def self.first_X_students_in_grade_10
+    def self.first_X_students_in_grade_10(X)
       sql = <<-SQL
       SELECT name
       FROM students
       WHERE grade = 10
-      ORDER BY name DESC LIMIT 10
+      ORDER BY name DESC
         SQL
-        DB[:conn].execute(sql)
-    end
+    DB[:conn].execute(sql).map.first(X) do |row|
+      self.new_from_db(row)
+      end
+
 
 end
