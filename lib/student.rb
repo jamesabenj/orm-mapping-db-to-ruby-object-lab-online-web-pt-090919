@@ -88,7 +88,7 @@ class Student
       SELECT name
       FROM students
       WHERE grade = 10
-      ORDER BY name limit 10 
+      ORDER BY name DESC LIMIT 10
         SQL
         DB[:conn].execute(sql)
     end
