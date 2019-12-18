@@ -90,7 +90,7 @@ class Student
       WHERE grade = 10
       ORDER BY name DESC
         SQL
-    DB[:conn].execute(sql).X.times.map do |row|
+    DB[:conn].execute(sql).x.times.map do |row|
       self.new_from_db(row)
       end
     end
