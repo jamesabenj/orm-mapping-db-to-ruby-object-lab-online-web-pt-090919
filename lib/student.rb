@@ -76,7 +76,7 @@ class Student
     sql = <<-SQL
     SELECT name
     FROM students
-    ORDER BY grade LIMIT 11
+    ORDER BY grade LIMIT 10
       SQL
     DB[:conn].execute(sql).map do |row|
         self.new_from_db(row)
