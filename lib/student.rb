@@ -88,7 +88,7 @@ class Student
       SELECT name
       FROM students
       WHERE grade = 10
-      ORDER BY name DESC
+      ORDER BY name ASC
         SQL
     DB[:conn].execute(sql).x.times.map do |row|
       self.new_from_db(row)
