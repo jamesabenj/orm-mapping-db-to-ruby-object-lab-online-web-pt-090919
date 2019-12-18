@@ -91,7 +91,6 @@ class Student
       ORDER BY name limit 10 
         SQL
         DB[:conn].execute(sql)
-      end
     end
 
 end
